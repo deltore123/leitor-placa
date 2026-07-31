@@ -4,7 +4,7 @@ import numpy as np
 import easyocr
 import imutils
 
-img = cv2.imread ('image.png')
+img = cv2.imread ('f1.jpg')
 
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -38,10 +38,10 @@ nova_img= cv2.bitwise_and(img, img, mask=mascara)
 (x2, y2) = (np.max(x), np.max(y))
 cropped_image = gray[x1:x2+1, y1:y2+1]
 
-### plt.figure(figsize=(8,4))
-#plt.imshow(cv2.cvtColor(cropped_image, cv2.COLOR_BGR2RGB))
-#plt.axis("off")
-#plt.show()
+plt.figure(figsize=(8,4))
+plt.imshow(cv2.cvtColor(cropped_image, cv2.COLOR_BGR2RGB))
+plt.axis("off")
+plt.show()
 
 
 
